@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+/* .............variables................. */
+:root {
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+
+/* Common Styling ..................  */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+ul {
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: black;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  transition: all 0.3s linear;
+  font-size: 1rem;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background: rgba(123, 102, 255, 0.683);
+  color: white;
+}
+
+/* .....................................    */
+
+/* ************ Main container****************** */
+#container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 2rem 8rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  gap: 1rem;
+}
+
+#container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./background.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#date-quto {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#date-time-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#date-container,
+#clock,
+#title {
+  background-color: rgb(123, 102, 255, 0.10);
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  height: 6rem;
+  width: 30%;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(7rem);
+  font-family: 'Dancing Script', cursive;
+}
+
+#title p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#clock span {
+  display: inline-block;
+  width: 3rem;
+  position: relative;
+}
+
+#clock span::after {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1rem;
+}
+
+#hrs::after {
+  content: "HOURS";
+}
+
+#min::after {
+  content: "MINS";
+}
+
+#sec::after {
+  content: "SECS";
+}
+
+#date {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#quto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.50rem 0.75rem;
+  background: rgb(95, 189, 255, 0.11);
+  backdrop-filter: blur(7rem);
+  border-radius: 0.5rem;
+
+}
+
+#quto-container p {
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+#to-do-aap {
+  width: 100%;
+  min-width: 23rem;
+  margin: 0 auto;
+  background-color: rgb(123, 102, 255, 0.10);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#adding-section {
+  padding: 3rem 0;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#input-box {
+  width: 35rem;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  height: 2.6rem;
+}
+
+#task-container {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+li {
+  position: relative;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  width: 100%;
+  line-height: 1.5;
+  background: rgb(123, 102, 255);
+  color: whitesmoke;
+  height: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: 'Single Day', cursive;
+}
+
+li.show {
+  min-height: 4rem;
+  height: auto;
+  margin: 1rem auto;
+  padding: 1rem 4rem;
+}
+
+.slide-fade li {
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+
+.slide-fade li.show {
+  opacity: 1;
+}
+
+ul li.completed {
+  text-decoration: line-through;
+}
+
+
+.delete-btn,
+.edit-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.7rem;
+  cursor: pointer;
+  margin-left: 3rem;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+.delete-btn {
+  right: 8%;
+}
+
+.edit-btn {
+  right: 4%;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  background-color: white;
+  color: rgb(123, 102, 255); 
+}
+/* ********************************* */
+@media (max-width: 1044px) {
+  #container {
+    padding: 2rem 6rem;
+  }
+
+  .delete-btn,
+  .edit-btn {
+    padding: 0.3rem;
+  }
+
+  #date-container,
+  #clock,
+  #title {
+    width: 100%;
+  }
+
+  #adding-section {
+    justify-content: space-evenly;
+  }
+
+  #input-box {
+    width: 50%;
+  }
+
+  .delete-btn {
+    right: 16%;
+  }
+
+  .edit-btn {
+    right: 4%;
+  }
+
+  li.show {
+    padding: 1rem 3rem;
+  }
+
+}
+
+@media (max-width: 700px) {
+  #container {
+    padding: 2rem 1rem;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #container {
+    padding: 2rem 0.2rem;
+  }
+
+  #input-box {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+
+  #adding-section {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #task-container {
+    margin-top: 4rem;
+  }
+
+  li.show {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+
+  #date-container,
+  #clock,
+  #title {
+    padding: 0.375rem 0.2rem;
+  }
+
+  li.show {
+    padding: 1rem 1rem;
+  }
+}

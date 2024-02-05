@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>To-Do App</title>
+</head>
+<body>
+    <div id="container">
+        <div id="date-quto">
+            <div id="date-time-container">
+                <div id="date-container">
+                    <p id="date"></p>
+                </div>      
+                <div id="title">
+                    <p>🌸 To-do List 🌸</p> 
+                </div>                     
+                <div id="clock">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>             
+            </div>            
+            <div id="quto-container">
+                <p id="quto"></p>
+                <p id="author"></p>
+            </div>             
+        </div>
+        <div id="to-do-aap">
+            <div id="adding-section">
+                <input type="text" id="input-box" placeholder="Enter a task...">
+                <button onclick="addTask()" class="btn">Add</button>
+            </div>
+            <ul id="task-container">
+                <!-- <li>first task</li>
+                <li>second task</li>
+                <li>third task</li> -->
+            </ul>           
+        </div>
+    </div>
+   
+    <script src="./quto.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
