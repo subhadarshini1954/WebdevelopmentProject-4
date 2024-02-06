@@ -249,7 +249,7 @@ li {
   border-radius: 0.5rem;
   width: 100%;
   line-height: 1.5;
-  background: rgb(123, 102, 255);
+  background: rgb(255, 255, 255);
   color: whitesmoke;
   height: 0;
   font-size: 2rem;
@@ -386,6 +386,6 @@ ul li.completed {
   }
 
   li.show {
-    padding: 1rem 1rem;
+    padding: 1rem 1rem; 
   }
 }
